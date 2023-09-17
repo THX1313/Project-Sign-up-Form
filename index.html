@@ -10,33 +10,37 @@
     <!-- Begin by scaffolding out the structure of the page, and then tackle the various sections one by one. -->
     <header></header>
     <main>
-        <div class="leftThird">
-            <img id="background"  src="halie-west-unsplash.jpg" alt="wild fern">
-            <div class="commercial">Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        <div class="masterContainer">
+            <div class="leftThird">
+                <img id="backgroundImage"  src="halie-west-unsplash.jpg" alt="wild fern">
+                <div class="source">Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </div>
             </div>
-        </div>
-        <div class="rightThirds">
-            <div class="formHeader">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, iure sed. Ullam, laudantium saepe. Eligendi voluptate tempore earum quod architecto odit omnis adipisci ex! Minima non ipsa id quas rem.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="rightThirds">
+                <div class="formHeader">
+                <p class="firstParagraph">This is not a real service! You know you need something like this in your life to help you realize your deepest dreams.</p>
+                <p class="secondParagraph">Sign up now to get strarted.</p>
+                <p class="thirdParagraph">You <em>know</em> you want to.</p>
 
-            </div>
-                <form action="POST">
-                    <p>Let's do this!</p>
+                </div>
+                <form action="POST" method="">
+                    <fieldset class="topFieldset">
+                        <legend>Let's do this!</legend>
                     <label for="firstName">FIRST NAME</label>
                     <label for="lastName">LAST NAME</label>
                     <label for="email">EMAIL</label>
                     <label for="phoneNumber">PHONE NUMBER</label>
                     <label for="password">PASSWORD</label>
                     <label for="confirmPassword">CONFIRM PASSWORD</label>
-                    <button>Create Account</button>
-                    <label for="login">Already have an account?</label>
+                    </fieldset>
+
+                    <fieldset class="bottomfieldset">
+                        <button>Create Account</button>
+                        <label for="login">Already have an account?</label>
+                    </fieldset>
                 </form>
             </div>
-
-
-        </div>
-
+        </div>       
     </main>
     <footer></footer>
     <script src="script.js"></script>
