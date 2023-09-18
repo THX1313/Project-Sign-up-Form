@@ -29,7 +29,6 @@ a:active {
 .leftThird {
     flex: auto;
     width: 33.3333%;
-    border: 2px solid red;
 
     position: relative;
 }
@@ -50,17 +49,17 @@ a:active {
     display: flex;
     width: clamp(450px, 100%, 1000px);
     /* height: 100vh; */
-
 }
 
 .rightThirds {
+    padding-left: calc(8px + 0.390625vw);
     background-color: white;
     flex: auto;
     width: 66.666%;
-    border: 4px solid purple;
 
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
 }
 
 p {
@@ -72,27 +71,66 @@ p {
 
 .firstParagraph {
     margin-top:  calc(28px + 0.390625vw);
+    height: 33.3333%;
 }
 
 .thirdParagraph {
     margin-top:  calc(7px + 0.390625vw);
     margin-bottom:  calc(7px + 0.390625vw);
-}
+    height: 33.3333%;
 
-form {
-    /* font-size: 1em; */
+}
+.formHeader {
+    height: 33.3333%;
+}
+.wrapper {
+    /* width: 500px; */
+    /* margin: 0 auto; */
+    border: 3px solid red;
     height: 66.6666%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-}
+    border: 4px solid purple;
+    /* height: auto; */
+  }
+  
+  .columnWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
-.topFieldset {
-    background-color: rgb(231, 229, 229);
-}
-
-.bottomFieldset {
-
-}
-
-button {
+    border: 4px solid green;
+    /* height: auto; */
+  }
+  
+  .column {
+    border: 3px solid blue;
+    flex:auto;
+    flex-basis: 50%;
+    padding: 10px;
+  }
+  
+  label {
     display: block;
-}
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
