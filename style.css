@@ -1,9 +1,8 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
 }
 body {
-    /* height: 100vh; */
     font-size: calc(8px + 0.390625vw);
     line-height: calc(8px + 0.390625vw);
 }
@@ -68,7 +67,6 @@ p {
 .firstParagraph {
     margin-top:  calc(28px + 0.390625vw);
     line-height: calc(12px + 0.390625vw);
-    /* height: 33.3333%; */
 }
 
 .thirdParagraph {
@@ -83,7 +81,6 @@ p {
     margin-right: calc(8px + 0.390625vw);
 }
 .formWrapper {
-    /* border: 3px solid red; */
     height: 33%;
     margin-left: calc(8px + 0.390625vw);
     margin-right: calc(8px + 0.390625vw);
@@ -100,20 +97,15 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    /* border: 4px solid purple; */
   }
   
   .columnWrapper {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
-    /* border: 2px solid green; */
   }
   
   .column {
-    /* border: 2px solid blue; */
     flex:auto;
     flex-basis: 50%;
     padding: 10px;
@@ -129,7 +121,6 @@ p {
   input {
     font-size: calc(4px + 0.390625vw);
     width: 50%;
-    /* height: (1em + 0.390625vw); */
     padding: calc(1px + 0.200625vw);
     margin-bottom: calc(8px + 0.300625vw);
     border: 1px solid #ccc;
@@ -163,5 +154,186 @@ hr {
 }  .logIn:hover {
   color: black;
 }  .logIn:active {
+  color: black;
+} */
+
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set base font size and line height using vw units */
+body {
+  font-size: calc(8px + 0.390625vw);
+  line-height: calc(8px + 0.390625vw);
+}
+
+/* Main content container */
+main {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+}
+
+/* Container for the main content with responsive width */
+.masterContainer {
+  display: flex;
+  width: clamp(450px, 100%, 1000px);
+}
+
+/* Background image styles */
+#backgroundImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+/* Left third of the layout */
+.leftThird {
+  flex: auto;
+  width: 33.3333%;
+  position: relative;
+}
+
+/* Source information styles */
+.source {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: none;
+  color: #fff;
+  font-size: calc(4px + 0.390625vw);
+  font-weight: 100;
+}
+
+/* Link styles */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: white;
+}
+
+/* Right two-thirds of the layout */
+.rightThirds {
+  background-color: white;
+  flex: auto;
+  width: 66.666%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Paragraph styles */
+p {
+  max-width: 52ch;
+  font-weight: bold;
+  margin: 0; /* Updated margin and padding to zero */
+  padding: 0;
+}
+
+/* First paragraph styles */
+.firstParagraph {
+  margin-top: calc(28px + 0.390625vw);
+  line-height: calc(12px + 0.390625vw);
+}
+
+/* Third paragraph styles */
+.thirdParagraph {
+  margin-top: calc(12px + 0.390625vw);
+  margin-bottom: calc(7px + 0.390625vw);
+  height: 33.3333%;
+}
+
+/* Form header styles */
+.formHeader {
+  height: 33%;
+  margin-left: calc(8px + 0.390625vw);
+  margin-right: calc(8px + 0.390625vw);
+}
+
+/* Form wrapper styles */
+.formWrapper {
+  height: 33%;
+  margin-left: calc(8px + 0.390625vw);
+  margin-right: calc(8px + 0.390625vw);
+  margin-bottom: calc(18px + 0.3900625vw);
+}
+
+/* Form footer styles */
+.formFooter {
+  height: 33%;
+  margin-left: calc(8px + 0.390625vw);
+  margin-right: calc(8px + 0.390625vw);
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Column wrapper styles */
+.columnWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Column styles */
+.column {
+  flex: auto;
+  flex-basis: 50%;
+  padding: 10px;
+  padding-left: 0;
+}
+
+/* Label styles */
+label {
+  font-size: calc(3px + 0.300625vw);
+  display: block;
+  margin-bottom: calc(1px + 0.090625vw);
+}
+
+/* Input styles */
+input {
+  font-size: calc(4px + 0.390625vw);
+  width: 50%;
+  padding: calc(1px + 0.200625vw);
+  margin-bottom: calc(8px + 0.300625vw);
+  border: 1px solid #ccc;
+}
+
+/* Horizontal rule styles */
+hr {
+  margin-left: 0;
+  margin-right: 0;
+  height: 1px;
+  background-color: #ded9d9;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Submit button styles */
+button[type="submit"] {
+  background-color: green;
+  color: #fff;
+  display: block;
+  width: calc(120px + 0.390625vw);
+  border: none;
+  border-radius: calc(5px + 0.390625vw);
+  padding: calc(2px + 0.390625vw);
+  cursor: pointer;
+  margin-top: calc(10px + 0.390625vw);
+  margin-bottom: calc(10px + 0.390625vw);
+}
+
+/* Log in link styles */
+.logIn:link,
+.logIn:visited,
+.logIn:hover,
+.logIn:active {
   color: black;
 }
