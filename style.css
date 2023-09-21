@@ -3,11 +3,16 @@
   margin: 0;
   padding: 0;
 }
-
+:root {
+  --background-color: rgb(58, 106, 58);
+  --hover-color: rgb(220, 112, 11);
+}
 /* Set base font size and line height using vw units */
 body {
   font-size: calc(8px + 0.390625vw);
   line-height: calc(8px + 0.390625vw);
+  width: clamp(50%, 100%, 1000px);
+
 }
 
 /* Main content container */
@@ -20,13 +25,14 @@ main {
 /* Container for the main content with responsive width */
 .masterContainer {
   display: flex;
-  width: clamp(450px, 100%, 1000px);
+  /* width: clamp(50%, 100%, 1000px); */
 }
 
 /* Background image styles */
 #backgroundImage {
+  flex: auto;
   width: 100%;
-  height: auto;
+  /* height: auto; */
   display: block;
   position: relative;
 }
@@ -48,6 +54,36 @@ main {
   color: #fff;
   font-size: calc(4px + 0.390625vw);
   font-weight: 100;
+}
+.odinImg {
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: 8vw;
+  display: inline;
+  /* border: 2px solid yellow; */
+}
+
+.odinLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* border: 2px solid red; */
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: none;
+}
+
+h1 {
+  /* border: 2px solid lightblue; */
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: 8vw;
+  letter-spacing: calc(1px + 0.190625vw);
+  font-size: calc(15px + 1.390625vw);
+  color: white;
 }
 
 /* Link styles */
@@ -154,21 +190,25 @@ hr {
   margin-right: 0;
   height: 1px;
   background-color: #ded9d9;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Submit button styles */
 button[type="submit"] {
-  background-color: green;
+  background-color: var(--background-color);
   color: #fff;
   display: block;
-  width: calc(120px + 0.390625vw);
-  border: none;
-  border-radius: calc(5px + 0.390625vw);
-  padding: calc(2px + 0.390625vw);
+  width: calc(100px + 0.390625vw);
+  border: 2px solid var(--hover-color);
+  border-radius: calc(4px + 0.390625vw);
+  padding: calc(1px + 0.190625vw);
   cursor: pointer;
   margin-top: calc(10px + 0.390625vw);
   margin-bottom: calc(10px + 0.390625vw);
+}
+button:hover{
+    background-color: var(--hover-color);
+    border: 2px solid var(--background-color);
 }
 
 /* Log in link styles */
@@ -176,5 +216,5 @@ button[type="submit"] {
 .logIn:visited,
 .logIn:hover,
 .logIn:active {
-  color: black;
+  color: var(--background-color);
 }
