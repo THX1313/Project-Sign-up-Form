@@ -21,24 +21,14 @@ body {
 main {
   display: flex;
   justify-content: center;
-  background-color: var(--main-background-color); /* Use custom variable for main-background color */
+  background-color: var(--main-background-color);
 }
 
 /* Container for the main content with responsive width */
 .masterContainer {
   display: flex;
-  /* width: clamp(50%, 100%, 1000px); */
 }
 
-/* Background image styles */
-/* #backgroundImage {
-  flex: auto;
-  width: 100%;
-  display: block;
-  position: relative;
-} */
-
-/* Background image styles */
 /* Background image styles */
 .backgroundImage {
   flex: auto;
@@ -51,8 +41,6 @@ main {
   display: block;
   position: relative;
 }
-
-
 
 /* Left third of the layout */
 .leftThird {
@@ -67,7 +55,6 @@ main {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: none; /* Consider removing this line as it's not necessary */
   color: #fff;
   font-size: calc(4px + 0.390625vw);
   font-weight: 100;
@@ -87,13 +74,11 @@ main {
   width: 100%;
   position: absolute;
   top: 20%;
-  left: 48%; /* Adjust this value to center it horizontally */
+  left: 46%; /* Adjust this value to center it horizontally */
   transform: translateX(-50%);
 }
 
-
 h1 {
-  /* border: 2px solid lightblue; */
   flex-shrink: 1;
   flex-basis: auto;
   width: 8vw;
@@ -214,8 +199,11 @@ button[type="submit"] {
   background-color: var(--background-color);
   color: #fff;
   display: block;
-  /* width: calc(100px + 0.390625vw); */
-  width: clamp(110px, 35%, 175); /* Use a percentage-based width to make it responsive */
+  width: 15vw;
+  /* width: clamp(110px, 35%, 175); */
+  font-size: 1.5vw;
+  /* letter-spacing: calc(1px + 0.190625vw); */
+
   border: 2px solid var(--hover-color);
   border-radius: calc(4px + 0.390625vw);
   padding: calc(1px + 0.190625vw);
@@ -229,10 +217,15 @@ button:hover {
   border: 2px solid var(--background-color);
 }
 
+span {
+  font-size: 1.5vw;
+}
 /* Log in link styles */
 .logIn:link,
 .logIn:visited,
 .logIn:hover,
 .logIn:active {
   color: var(--background-color);
+  font-size: 1.5vw;
+
 }
