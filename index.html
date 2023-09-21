@@ -4,63 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Sign-up-Form</title>
+    <title>Sign-up Form</title>
 </head>
 <body>
-    <header></header>
+    <header><!-- Header content here --></header>
     <main>
         <div class="masterContainer">
             <div class="leftThird">
-                <img id="backgroundImage"  src="halie-west-unsplash.jpg" alt="wild fern">
-                <div  class="odinLogo">
+                    <!-- <div id="backgroundImage" class="backgroundImage"></div> -->
+                    <!-- Rest of the content -->
+                    <img src="halie-west-unsplash.jpg" alt="wild fern" class="backgroundImage">
+                <!-- </div> -->
+                <div class="odinLogo">
                     <img src="odin-lined.png" alt="Odin" class="odinImg">
                     <h1>ODIN</h1>
                 </div>
-
-                <div class="source">Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                </div>
+                <div class="source">Photo by <a href="https://unsplash.com/@haliewestphoto?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Halie West</a> on <a href="https://unsplash.com/photos/25xggax4bSA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
             </div>
             <div class="rightThirds">
                 <div class="formHeader">
                     <p class="firstParagraph">This is not a real service! You know you need something like this in your life to help you realize your deepest dreams.</p>
-                    <p class="secondParagraph">Sign up now to get strarted.</p>
+                    <p class="secondParagraph">Sign up now to get started.</p>
                     <p class="thirdParagraph">You <em>know</em> you want to.</p>
                 </div>
-
-                <div  class="formWrapper">   
-                    <form action="POST" method=""  id="myForm">
+                <div class="formWrapper">
+                    <form action="POST" method="POST" id="myForm"><!-- Added method="POST" to the form -->
                         <p>Let's do this!</p>
                         <div class="columnWrapper">
                             <div class="column">
                                 <label for="firstName">FIRST NAME:</label>
-                                <input type="text" id="firstName" placeholder="Jane" autocomplete="on" required></input>
+                                <input type="text" id="firstName" placeholder="Jane" autocomplete="on" required>
                                 <label for="lastName">LAST NAME:</label>
-                                <input type="text" id="lastName" placeholder="Doe" autocomplete="on" required></input>
+                                <input type="text" id="lastName" placeholder="Doe" autocomplete="on" required>
                                 <label for="email">EMAIL:</label>
-                                <input type="email" id="email" placeholder="janedoe@email.com" autocomplete="on required"></input>
+                                <input type="email" id="email" placeholder="janedoe@email.com" autocomplete="on" required>
                             </div>
-
                             <div class="column">
                                 <label for="phoneNumber">PHONE NUMBER:</label>
-                                <input type="number" id="phoneNumber" placeholder="5103259928" autocomplete="on" required></input>
+                                <input type="tel" id="phoneNumber" placeholder="5103259928" autocomplete="on" required><!-- Changed input type to "tel" -->
                                 <label for="password">PASSWORD:</label>
-                                <input type="password" id="password" placeholder="*********" autocomplete="on" required></input>
+                                <input type="password" id="password" placeholder="*********" autocomplete="on" required>
                                 <label for="confirmPassword">CONFIRM PASSWORD:</label>
-                                <input type="password" id="confirmPassword" placeholder="*********" autocomplete="on" required></input>
+                                <input type="password" id="confirmPassword" placeholder="*********" autocomplete="on" required>
                             </div>
                         </div>
                     </form>
                 </div>
                 <hr>
                 <div class="formFooter">
-                    <button type="submit" value="submit" form="myForm">Create Account</button>
+                    <button type="submit" form="myForm">Create Account</button><!-- Added form attribute to link button to the form -->
                     <span>Already have an account?</span>
-                    <a href="" class="logIn"> Log in</a>
+                    <a href="#" class="logIn"> Log in</a><!-- Added "#" to href attribute to prevent page reload -->
                 </div>
             </div>
-        </div>       
+        </div>
     </main>
-    <footer></footer>
+    <footer><!-- Footer content here --></footer>
     <script src="script.js"></script>
 </body>
 </html>
