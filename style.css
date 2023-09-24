@@ -7,7 +7,6 @@
 /* Define custom variables for colors */
 :root {
   --button-color: rgb(87, 109, 76);
-  --hover-color: rgb(137, 57, 31);
   --main-background-color: black;
   --hr-background-color: rgb(223, 217, 217);
   --input-border-color: rgb(204, 204, 204);
@@ -204,7 +203,6 @@ button[type="submit"] {
   width: 13vw;
   font-size: 1.25vw;
 
-  border: 1px solid var(--hover-color);
   border-radius: calc(4px + 0.390625vw);
   padding: calc(1px + 0.190625vw);
   cursor: pointer;
@@ -213,8 +211,7 @@ button[type="submit"] {
 }
 
 button:hover {
-  background-color: var(--hover-color);
-  border: 1px solid var(--button-color);
+  background-color: black;
 }
 
 span {
@@ -233,14 +230,14 @@ span {
 }
 
 input:invalid {
-  border-color: var(--hover-color);
+  border-color: red;
 }
 
 input:valid {
-  border-color: var(--button-color);
+  border-color: green;
 }
 
 input:focus {
-  border-color: blue;
-  box-shadow: 5px 5px 10px 2px var(--main-background-color);
+  outline-offset: 2px;
+  box-shadow: 2px 2px 5px 1px black;
 }
